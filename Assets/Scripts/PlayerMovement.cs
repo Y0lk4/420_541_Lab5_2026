@@ -1,6 +1,4 @@
 using UnityEngine;
-using Cinemachine;
-using NUnit.Framework;
 
 
 [RequireComponent(typeof(Rigidbody))] // Ensures that a Rigidbody component is attached to the GameObject
@@ -21,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private float turnInput;
     private bool isGrounded;
     private bool jumpRequested = false;
+    //lets other scrips read the grounded state
+    public bool IsGrounded => isGrounded;
 
     private void Start()
     {
